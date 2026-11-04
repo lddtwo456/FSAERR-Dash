@@ -1,0 +1,428 @@
+<NetworkDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://kayak.2codeornot2code.org/1.0" xsi:noNamespaceSchemaLocation="Definition.xsd">
+  <Document version="HIPBNYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY/4/%%%/4/'%**4YYY///" />
+  <Node id="1" name="ECU" />
+  <Bus name="Bus">
+    <Message id="0x360" name="ECU_360" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="RPM" offset="0" length="16" endianess="big">
+        <Value unit="rpm" />
+      </Signal>
+      <Signal name="ManifoldPressure" offset="16" length="16" endianess="big">
+        <Notes>Absolute pressure, rest are gauge pressure unless stated otherwise</Notes>
+        <Value slope="0.1" unit="kPa" />
+      </Signal>
+      <Signal name="ThrottlePosition" offset="32" length="16" endianess="big">
+        <Value slope="0.1" unit="%" />
+      </Signal>
+      <Signal name="CoolantPressure" offset="48" length="16" endianess="big">
+        <Value slope="0.1" intercept="-101.3" unit="kPa" />
+      </Signal>
+    </Message>
+    <Message id="0x361" name="ECU_361" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="FuelPressure" offset="0" length="16" endianess="big">
+        <Value slope="0.1" intercept="-101.3" unit="kPa" />
+      </Signal>
+      <Signal name="OilPressure" offset="16" length="16" endianess="big">
+        <Value slope="0.1" intercept="-101.3" unit="kPa" />
+      </Signal>
+      <Signal name="EngineDemand" offset="32" length="16" endianess="big">
+        <Value slope="0.1" unit="%" />
+      </Signal>
+      <Signal name="WastegatePressure" offset="48" length="16" endianess="big">
+        <Value slope="0.1" intercept="-101.3" unit="kPa" />
+      </Signal>
+    </Message>
+    <Message id="0x362" name="ECU_362" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="InjectionStg1Duty" offset="0" length="16" endianess="big">
+        <Value slope="0.1" unit="%" />
+      </Signal>
+      <Signal name="InjectionStg2Duty" offset="16" length="16" endianess="big">
+        <Value slope="0.1" unit="%" />
+      </Signal>
+      <Signal name="IgnitionAngle" offset="32" length="16" endianess="big">
+        <Value slope="0.1" unit="deg" type="signed" />
+      </Signal>
+    </Message>
+    <Message id="0x363" name="ECU_363" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="WheelSlip" offset="0" length="16" endianess="big">
+        <Value slope="0.1" unit="kmph" type="signed" />
+      </Signal>
+      <Signal name="WheelDiff" offset="16" length="16" endianess="big">
+        <Value slope="0.1" unit="kmph" type="signed" />
+      </Signal>
+      <Signal name="LaunchControlEndRPM" offset="48" length="16" endianess="big">
+        <Value unit="rpm" />
+      </Signal>
+    </Message>
+    <Message id="0x364" name="ECU_364" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="InjectionStg1AvgTime" offset="0" length="16" endianess="big">
+        <Value slope="0.001" unit="ms" />
+      </Signal>
+      <Signal name="InjectionStg2AvgTime" offset="16" length="16" endianess="big">
+        <Value slope="0.001" unit="ms" />
+      </Signal>
+      <Signal name="InjectionStg3AvgTime" offset="32" length="16" endianess="big">
+        <Value slope="0.001" unit="ms" />
+      </Signal>
+      <Signal name="InjectionStg4AvgTime" offset="48" length="16" endianess="big">
+        <Value slope="0.001" unit="ms" />
+      </Signal>
+    </Message>
+    <Message id="0x368" name="ECU_368" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="Wideband1" offset="0" length="16" endianess="big">
+        <Value slope="0.001" unit="lambda" />
+      </Signal>
+      <Signal name="Wideband2" offset="16" length="16" endianess="big">
+        <Value slope="0.001" unit="lambda" />
+      </Signal>
+      <Signal name="Wideband3" offset="32" length="16" endianess="big">
+        <Value slope="0.001" unit="lambda" />
+      </Signal>
+      <Signal name="Wideband4" offset="48" length="16" endianess="big">
+        <Value slope="0.001" unit="lambda" />
+      </Signal>
+    </Message>
+    <Message id="0x369" name="ECU_369" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="TriggerSystemErrors" offset="0" length="16" endianess="big" />
+      <Signal name="TriggerCounter" offset="16" length="16" endianess="big" />
+      <Signal name="TriggerSyncLvl" offset="48" length="16" endianess="big" />
+    </Message>
+    <Message id="0x36A" name="ECU_36A" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="KnockLvl1" offset="0" length="16" endianess="big">
+        <Value slope="0.01" unit="dB" />
+      </Signal>
+      <Signal name="KnockLvl2" offset="16" length="16" endianess="big">
+        <Value slope="0.01" unit="dB" />
+      </Signal>
+    </Message>
+    <Message id="0x36B" name="ECU_36B" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="BrakePressureFrnt" offset="0" length="16" endianess="big">
+        <Value intercept="-101.3" unit="kPa" />
+      </Signal>
+      <Signal name="NOSPressure1" offset="16" length="16" endianess="big">
+        <Notes>Strange math in the CAN specs, check it out</Notes>
+        <Value slope="0.22" intercept="-101.3" unit="kPa" />
+      </Signal>
+      <Signal name="TurboSpeed1" offset="32" length="16" endianess="big">
+        <Value slope="10" unit="rpm" />
+      </Signal>
+      <Signal name="LateralG" offset="48" length="16" endianess="big">
+        <Value slope="0.1" unit="mps2" type="signed" />
+      </Signal>
+    </Message>
+    <Message id="0x36C" name="ECU_36C" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="WheelSpeedFL" offset="0" length="16" endianess="big">
+        <Value slope="0.1" unit="kmph" />
+      </Signal>
+      <Signal name="WheelSpeedFR" offset="16" length="16" endianess="big">
+        <Value slope="0.1" unit="kmph" />
+      </Signal>
+      <Signal name="WheelSpeedRL" offset="32" length="16" endianess="big">
+        <Value slope="0.1" unit="kmph" />
+      </Signal>
+      <Signal name="WheelSpeedRR" offset="48" length="16" endianess="big">
+        <Value slope="0.1" unit="kmph" />
+      </Signal>
+    </Message>
+    <Message id="0x36D" name="ECU_36D" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="ExhaustCam1" offset="32" length="16" endianess="big">
+        <Value slope="0.1" unit="deg" type="signed" />
+      </Signal>
+      <Signal name="ExhaustCam2" offset="48" length="16" endianess="big">
+        <Value slope="0.1" unit="deg" type="signed" />
+      </Signal>
+    </Message>
+    <Message id="0x36E" name="ECU_36E" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="EngineLimitingActive" offset="15" endianess="big" />
+      <Signal name="LaunchControlIgnitionDelay" offset="16" length="16" endianess="big">
+        <Value slope="0.1" unit="deg" type="signed" />
+      </Signal>
+      <Signal name="LaunchControlFuelEnrich" offset="32" length="16" endianess="big">
+        <Value slope="0.1" unit="%" type="signed" />
+      </Signal>
+      <Signal name="LongitudinalG" offset="48" length="16" endianess="big">
+        <Value slope="0.1" unit="mps2" type="signed" />
+      </Signal>
+    </Message>
+    <Message id="0x36F" name="ECU_36F" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="GenericOut1DutyCycle" offset="0" length="16" endianess="big">
+        <Value slope="0.1" unit="%" />
+      </Signal>
+      <Signal name="BoostControlOut" offset="16" length="16" endianess="big">
+        <Value slope="0.1" unit="%" />
+      </Signal>
+    </Message>
+    <Message id="0x370" name="ECU_370" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="VehicleSpeed" offset="0" length="16" endianess="big">
+        <Value slope="0.1" unit="kmph" />
+      </Signal>
+      <Signal name="CombinedGear" offset="16" length="16" endianess="big">
+        <Notes>Combination of gear and selector channels (selector = x&gt;&gt;8 &amp;&amp; 0xFF gear = x &amp;&amp; 0xFF</Notes>
+        <Value type="signed" />
+      </Signal>
+      <Signal name="IntakeCam1" offset="32" length="16" endianess="big">
+        <Value slope="0.1" unit="deg" type="signed" />
+      </Signal>
+      <Signal name="IntakeCam2" offset="48" length="16" endianess="big">
+        <Value slope="0.1" unit="deg" type="signed" />
+      </Signal>
+    </Message>
+    <Message id="0x371" name="ECU_371" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="FuelFlow" offset="0" length="16" endianess="big">
+        <Value unit="ccpmin" />
+      </Signal>
+      <Signal name="FuelFlowReturn" offset="16" length="16" endianess="big">
+        <Value unit="ccpmin" />
+      </Signal>
+    </Message>
+    <Message id="0x372" name="ECU_372" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="BatteryVoltage" offset="0" length="16" endianess="big">
+        <Value slope="0.1" unit="V" />
+      </Signal>
+      <Signal name="TargetBoostLevel" offset="32" length="16" endianess="big">
+        <Value slope="0.1" unit="kPa" />
+      </Signal>
+      <Signal name="BarometricPressure" offset="48" length="16" endianess="big">
+        <Notes>Absolute atmospherric pressure</Notes>
+        <Value slope="0.1" unit="kPa" />
+      </Signal>
+    </Message>
+    <Message id="0x373" name="ECU_373" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="EGT1" offset="0" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+      <Signal name="EGT2" offset="16" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+      <Signal name="EGT3" offset="32" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+      <Signal name="EGT4" offset="48" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+    </Message>
+    <Message id="0x374" name="ECU_374" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="EGT5" offset="0" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+      <Signal name="EGT6" offset="16" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+      <Signal name="EGT7" offset="32" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+      <Signal name="EGT8" offset="48" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+    </Message>
+    <Message id="0x375" name="ECU_375" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="EGT9" offset="0" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+      <Signal name="EGT10" offset="16" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+      <Signal name="EGT11" offset="32" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+      <Signal name="EGT12" offset="48" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+    </Message>
+    <Message id="0x376" name="ECU_376" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="AmbientAirTemp" offset="0" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+      <Signal name="RelativeHumidity" offset="16" length="16" endianess="big">
+        <Value slope="0.1" unit="%" type="signed" />
+      </Signal>
+      <Signal name="SpecificHumidity" offset="32" length="16" endianess="big">
+        <Value slope="100" unit="ppm" />
+      </Signal>
+      <Signal name="AbsoluteHumidity" offset="48" length="16" endianess="big">
+        <Value slope="0.1" unit="gpm3" />
+      </Signal>
+    </Message>
+    <Message id="0x377" name="ECU_377" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="BoostPressurePreIntercooler" offset="0" length="16" endianess="big">
+        <Value slope="0.1" unit="kPa" />
+      </Signal>
+    </Message>
+    <Message id="0x380" name="ECU_380" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="GenericOut1Value" offset="0" length="16" endianess="big" />
+      <Signal name="GenericOut2Value" offset="16" length="16" endianess="big" />
+      <Signal name="GenericOut3Value" offset="32" length="16" endianess="big" />
+      <Signal name="GenericOut4Value" offset="48" length="16" endianess="big" />
+    </Message>
+    <Message id="0x3E0" name="ECU_3E0" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="CoolantTemp" offset="0" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+      <Signal name="AirTemp" offset="16" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+      <Signal name="FuelTemp" offset="32" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+      <Signal name="OilTemp" offset="48" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+    </Message>
+    <Message id="0x3E1" name="ECU_3E1" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="GearboxOilTemp" offset="0" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+      <Signal name="DiffOilTemp" offset="16" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+      <Signal name="FuelComposition" offset="32" length="16" endianess="big">
+        <Value slope="0.1" unit="%" />
+      </Signal>
+      <Signal name="AirTempPreIntercooler" offset="48" length="16" endianess="big">
+        <Value slope="0.1" unit="K" />
+      </Signal>
+    </Message>
+    <Message id="0x3E2" name="ECU_3E2" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="FuelLevel" offset="0" length="16" endianess="big">
+        <Value slope="0.1" unit="L" />
+      </Signal>
+      <Signal name="FuelVolumeEstimatedFlow" offset="16" length="16" endianess="big">
+        <Value slope="0.1" unit="ccpmin" type="signed" />
+      </Signal>
+      <Signal name="AvgFuelConsumptionMileage" offset="32" length="16" endianess="big">
+        <Value slope="0.1" unit="kmpL" />
+      </Signal>
+      <Signal name="FuelLevel2" offset="48" length="16" endianess="big">
+        <Notes>In the specs this is also just called Fuel Level, but I don't know why there'd be 2 with the same name</Notes>
+        <Value slope="0.1" unit="L" />
+      </Signal>
+    </Message>
+    <Message id="0x3E3" name="ECU_3E3" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="FuelTrimShortTermBank1" offset="0" length="16" endianess="big">
+        <Value slope="0.1" unit="%" type="signed" />
+      </Signal>
+      <Signal name="FuelTrimShortTermBank2" offset="16" length="16" endianess="big">
+        <Value slope="0.1" unit="%" type="signed" />
+      </Signal>
+      <Signal name="FuelTrimShortTermBank3" offset="32" length="16" endianess="big">
+        <Value slope="0.1" unit="%" type="signed" />
+      </Signal>
+      <Signal name="FuelTrimShortTermBank4" offset="48" length="16" endianess="big">
+        <Value slope="0.1" unit="%" type="signed" />
+      </Signal>
+    </Message>
+    <Message id="0x3E4" name="ECU_3E4" length="8">
+      <Producer>
+        <NodeRef id="1" />
+      </Producer>
+      <Signal name="NeutralSwitch" offset="8" endianess="big" />
+      <Signal name="ReverseSwitch" offset="9" endianess="big" />
+      <Signal name="GearSwitch" offset="10" endianess="big" />
+      <Signal name="DecelCutActive" offset="11" endianess="big" />
+      <Signal name="TransientThrottleActive" offset="12" endianess="big" />
+      <Signal name="BrakePedalSwitch" offset="13" endianess="big" />
+      <Signal name="ClutchSwitch" offset="14" endianess="big" />
+      <Signal name="OilPressureLight" offset="15" endianess="big" />
+      <Signal name="LaunchControlActive" offset="16" endianess="big" />
+      <Signal name="LaunchControlSwitch" offset="17" endianess="big" />
+      <Signal name="AuxRPMLimiterActive" offset="18" endianess="big" />
+      <Signal name="BrakeFluidLevelSwitch" offset="19" endianess="big" />
+      <Signal name="FlatShiftSwitch" offset="20" endianess="big" />
+      <Signal name="ClutchPressureSensor" offset="21" endianess="big" />
+      <Signal name="TorqueReductionActive" offset="22" endianess="big" />
+      <Signal name="TractionControlEnabled" offset="24" endianess="big" />
+      <Signal name="TractionControlActive" offset="25" endianess="big" />
+      <Signal name="AirConRequest" offset="26" endianess="big" />
+      <Signal name="AirConOutput" offset="27" endianess="big" />
+      <Signal name="Thermofan4On" offset="28" endianess="big" />
+      <Signal name="Thermofan3On" offset="29" endianess="big" />
+      <Signal name="Thermofan2On" offset="30" endianess="big" />
+      <Signal name="Thermofan1On" offset="31" endianess="big" />
+      <Signal name="RotaryTrimPot1" offset="32" length="8" endianess="big" />
+      <Signal name="RotaryTrimPot2" offset="40" length="8" endianess="big" />
+      <Signal name="RotaryTrimPot3" offset="48" length="8" endianess="big" />
+      <Signal name="CheckEngineLight" offset="56" endianess="big" />
+      <Signal name="BatteryLightActive" offset="57" endianess="big" />
+      <Signal name="HandBrakeState" offset="62" endianess="big" />
+      <Signal name="TractionControlLight" offset="63" endianess="big" />
+    </Message>
+    <Message id="0x3E5" name="ECU_3E5" length="8" />
+  </Bus>
+</NetworkDefinition>
