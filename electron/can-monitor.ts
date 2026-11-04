@@ -6,24 +6,19 @@ const db = new can.DatabaseService(channel, network.buses['Bus']);
 
 channel.start();
 
-const signals = {
-    'RPM': 0,
-    'OilPressureLight': false
+const signals: Record<string, number | undefined> = {};
+
+// There might be 2 listeners per signal look into that if it becomes a problem smile
+for (const message of Object.values(db.messages)) {
+    for (const [signalName, signal] of Object.entries(message.signals)) {
+        signal.onChange(function(s: can.Signal) {
+            console.log(signalName + ' changed to: ' + s.value);
+            if (s.value !== undefined) {
+                signals[signalName] = s.value;
+            }
+        });
+    }
 }
-
-db.messages['ECU_360'].signals['RPM'].onChange(function(s: can.Signal) {
-    console.log('RPM changed to: ' + s.value);
-    if (s.value !== undefined) {
-        signals.RPM = s.value;
-    }
-});
-
-db.messages['ECU_3E4'].signals['OilPressureLight'].onChange(function(s: can.Signal) {
-    console.log('OilPressureLight changed to: ' + s.value);
-    if (s.value !== undefined) {
-        signals.OilPressureLight = Boolean(s.value);
-    }
-});
 
 export function getSignals() {
     return signals;
