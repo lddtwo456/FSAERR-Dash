@@ -15,4 +15,4 @@ export function TelemetryProvider({ children }: { children: ReactNode }) {
     return <TelemetryContext.Provider value={values}>{children}</TelemetryContext.Provider>
 }
 
-export const useTelemetry = () => useContext(TelemetryContext);
+export const useTelemetry = () => useContext(TelemetryContext)

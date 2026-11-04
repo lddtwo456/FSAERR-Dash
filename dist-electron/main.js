@@ -1,8 +1,24 @@
 import { ipcMain, app, BrowserWindow } from "electron";
-import { randomInt } from "node:crypto";
 import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
+import * as can from "socketcan";
+const network = can.parseNetworkDescription("./src/assets/can.kcd");
+const channel = can.createRawChannel("vcan0", true);
+const db = new can.DatabaseService(channel, network.buses["Bus"]);
+channel.start();
+const signals = {
+  "RPM": 0
+};
+db.messages["ECU_360"].signals["RPM"].onChange(function(s) {
+  console.log("RPM changed to: " + s.value);
+  if (s.value !== void 0) {
+    signals.RPM = s.value;
+  }
+});
+function getSignals() {
+  return signals;
+}
 createRequire(import.meta.url);
 const __dirname$1 = path.dirname(fileURLToPath(import.meta.url));
 process.env.APP_ROOT = path.join(__dirname$1, "..");
@@ -27,10 +43,7 @@ function createWindow() {
     win.loadFile(path.join(RENDERER_DIST, "index.html"));
   }
 }
-function getUpdatedValues() {
-  return { rpm: randomInt(950, 1050) };
-}
-ipcMain.handle("telemetry:get", () => getUpdatedValues());
+ipcMain.handle("telemetry:get", () => getSignals());
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
     app.quit();

@@ -1,8 +1,8 @@
 import { app, BrowserWindow, ipcMain } from 'electron'
-import { randomInt } from 'node:crypto';
 import { createRequire } from 'node:module'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
+import { getSignals } from './can-monitor'
 
 const require = createRequire(import.meta.url)
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -48,12 +48,7 @@ function createWindow() {
   }
 }
 
-function getUpdatedValues(): Record<string, number> {
-  // Simulate fetching latest CAN data
-  return { rpm: randomInt(950, 1050) };
-}
-
-ipcMain.handle('telemetry:get', () => getUpdatedValues());
+ipcMain.handle('telemetry:get', () => getSignals());
 
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits
