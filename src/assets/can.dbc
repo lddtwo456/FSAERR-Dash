@@ -1,0 +1,281 @@
+VERSION "HIPBNYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY/4/%%%/4/'%**4YYY///"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: ECU
+
+
+BO_ 864 ECU_360: 8 ECU
+ SG_ RPM : 7|16@0+ (1,0) [0|0] "rpm" Vector__XXX
+ SG_ ManifoldPressure : 23|16@0+ (0.1,0) [0|0] "kPa" Vector__XXX
+ SG_ ThrottlePosition : 39|16@0+ (0.1,0) [0|0] "%" Vector__XXX
+ SG_ CoolantPressure : 55|16@0+ (0.1,-101.3) [0|0] "kPa" Vector__XXX
+
+BO_ 865 ECU_361: 8 ECU
+ SG_ FuelPressure : 7|16@0+ (0.1,-101.3) [0|0] "kPa" Vector__XXX
+ SG_ OilPressure : 23|16@0+ (0.1,-101.3) [0|0] "kPa" Vector__XXX
+ SG_ EngineDemand : 39|16@0+ (0.1,0) [0|0] "%" Vector__XXX
+ SG_ WastegatePressure : 55|16@0+ (0.1,-101.3) [0|0] "kPa" Vector__XXX
+
+BO_ 866 ECU_362: 8 ECU
+ SG_ InjectionStg1Duty : 7|16@0+ (0.1,0) [0|0] "%" Vector__XXX
+ SG_ InjectionStg2Duty : 23|16@0+ (0.1,0) [0|0] "%" Vector__XXX
+ SG_ IgnitionAngle : 39|16@0- (0.1,0) [0|0] "deg" Vector__XXX
+
+BO_ 867 ECU_363: 8 ECU
+ SG_ WheelSlip : 7|16@0- (0.1,0) [0|0] "kmph" Vector__XXX
+ SG_ WheelDiff : 23|16@0- (0.1,0) [0|0] "kmph" Vector__XXX
+ SG_ LaunchControlEndRPM : 55|16@0+ (1,0) [0|0] "rpm" Vector__XXX
+
+BO_ 868 ECU_364: 8 ECU
+ SG_ InjectionStg1AvgTime : 7|16@0+ (0.001,0) [0|0] "ms" Vector__XXX
+ SG_ InjectionStg2AvgTime : 23|16@0+ (0.001,0) [0|0] "ms" Vector__XXX
+ SG_ InjectionStg3AvgTime : 39|16@0+ (0.001,0) [0|0] "ms" Vector__XXX
+ SG_ InjectionStg4AvgTime : 55|16@0+ (0.001,0) [0|0] "ms" Vector__XXX
+
+BO_ 872 ECU_368: 8 ECU
+ SG_ Wideband1 : 7|16@0+ (0.001,0) [0|0] "lambda" Vector__XXX
+ SG_ Wideband2 : 23|16@0+ (0.001,0) [0|0] "lambda" Vector__XXX
+ SG_ Wideband3 : 39|16@0+ (0.001,0) [0|0] "lambda" Vector__XXX
+ SG_ Wideband4 : 55|16@0+ (0.001,0) [0|0] "lambda" Vector__XXX
+
+BO_ 873 ECU_369: 8 ECU
+ SG_ TriggerSystemErrors : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ TriggerCounter : 23|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ TriggerSyncLvl : 55|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 874 ECU_36A: 8 ECU
+ SG_ KnockLvl1 : 7|16@0+ (0.01,0) [0|0] "dB" Vector__XXX
+ SG_ KnockLvl2 : 23|16@0+ (0.01,0) [0|0] "dB" Vector__XXX
+
+BO_ 875 ECU_36B: 8 ECU
+ SG_ BrakePressureFrnt : 7|16@0+ (1,-101.3) [0|0] "kPa" Vector__XXX
+ SG_ NOSPressure1 : 23|16@0+ (0.22,-101.3) [0|0] "kPa" Vector__XXX
+ SG_ TurboSpeed1 : 39|16@0+ (10,0) [0|0] "rpm" Vector__XXX
+ SG_ LateralG : 55|16@0- (0.1,0) [0|0] "mps2" Vector__XXX
+
+BO_ 876 ECU_36C: 8 ECU
+ SG_ WheelSpeedFL : 7|16@0+ (0.1,0) [0|0] "kmph" Vector__XXX
+ SG_ WheelSpeedFR : 23|16@0+ (0.1,0) [0|0] "kmph" Vector__XXX
+ SG_ WheelSpeedRL : 39|16@0+ (0.1,0) [0|0] "kmph" Vector__XXX
+ SG_ WheelSpeedRR : 55|16@0+ (0.1,0) [0|0] "kmph" Vector__XXX
+
+BO_ 877 ECU_36D: 8 ECU
+ SG_ ExhaustCam1 : 39|16@0- (0.1,0) [0|0] "deg" Vector__XXX
+ SG_ ExhaustCam2 : 55|16@0- (0.1,0) [0|0] "deg" Vector__XXX
+
+BO_ 878 ECU_36E: 8 ECU
+ SG_ EngineLimitingActive : 8|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LaunchControlIgnitionDelay : 23|16@0- (0.1,0) [0|0] "deg" Vector__XXX
+ SG_ LaunchControlFuelEnrich : 39|16@0- (0.1,0) [0|0] "%" Vector__XXX
+ SG_ LongitudinalG : 55|16@0- (0.1,0) [0|0] "mps2" Vector__XXX
+
+BO_ 879 ECU_36F: 8 ECU
+ SG_ GenericOut1DutyCycle : 7|16@0+ (0.1,0) [0|0] "%" Vector__XXX
+ SG_ BoostControlOut : 23|16@0+ (0.1,0) [0|0] "%" Vector__XXX
+
+BO_ 880 ECU_370: 8 ECU
+ SG_ VehicleSpeed : 7|16@0+ (0.1,0) [0|0] "kmph" Vector__XXX
+ SG_ CombinedGear : 23|16@0- (1,0) [0|0] "" Vector__XXX
+ SG_ IntakeCam1 : 39|16@0- (0.1,0) [0|0] "deg" Vector__XXX
+ SG_ IntakeCam2 : 55|16@0- (0.1,0) [0|0] "deg" Vector__XXX
+
+BO_ 881 ECU_371: 8 ECU
+ SG_ FuelFlow : 7|16@0+ (1,0) [0|0] "ccpmin" Vector__XXX
+ SG_ FuelFlowReturn : 23|16@0+ (1,0) [0|0] "ccpmin" Vector__XXX
+
+BO_ 882 ECU_372: 8 ECU
+ SG_ BatteryVoltage : 7|16@0+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ TargetBoostLevel : 39|16@0+ (0.1,0) [0|0] "kPa" Vector__XXX
+ SG_ BarometricPressure : 55|16@0+ (0.1,0) [0|0] "kPa" Vector__XXX
+
+BO_ 883 ECU_373: 8 ECU
+ SG_ EGT1 : 7|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+ SG_ EGT2 : 23|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+ SG_ EGT3 : 39|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+ SG_ EGT4 : 55|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+
+BO_ 884 ECU_374: 8 ECU
+ SG_ EGT5 : 7|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+ SG_ EGT6 : 23|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+ SG_ EGT7 : 39|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+ SG_ EGT8 : 55|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+
+BO_ 885 ECU_375: 8 ECU
+ SG_ EGT9 : 7|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+ SG_ EGT10 : 23|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+ SG_ EGT11 : 39|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+ SG_ EGT12 : 55|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+
+BO_ 886 ECU_376: 8 ECU
+ SG_ AmbientAirTemp : 7|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+ SG_ RelativeHumidity : 23|16@0- (0.1,0) [0|0] "%" Vector__XXX
+ SG_ SpecificHumidity : 39|16@0+ (100,0) [0|0] "ppm" Vector__XXX
+ SG_ AbsoluteHumidity : 55|16@0+ (0.1,0) [0|0] "gpm3" Vector__XXX
+
+BO_ 887 ECU_377: 8 ECU
+ SG_ BoostPressurePreIntercooler : 7|16@0+ (0.1,0) [0|0] "kPa" Vector__XXX
+
+BO_ 896 ECU_380: 8 ECU
+ SG_ GenericOut1Value : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ GenericOut2Value : 23|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ GenericOut3Value : 39|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ GenericOut4Value : 55|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 992 ECU_3E0: 8 ECU
+ SG_ CoolantTemp : 7|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+ SG_ AirTemp : 23|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+ SG_ FuelTemp : 39|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+ SG_ OilTemp : 55|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+
+BO_ 993 ECU_3E1: 8 ECU
+ SG_ GearboxOilTemp : 7|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+ SG_ DiffOilTemp : 23|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+ SG_ FuelComposition : 39|16@0+ (0.1,0) [0|0] "%" Vector__XXX
+ SG_ AirTempPreIntercooler : 55|16@0+ (0.1,0) [0|0] "K" Vector__XXX
+
+BO_ 994 ECU_3E2: 8 ECU
+ SG_ FuelLevel : 7|16@0+ (0.1,0) [0|0] "L" Vector__XXX
+ SG_ FuelVolumeEstimatedFlow : 23|16@0- (0.1,0) [0|0] "ccpmin" Vector__XXX
+ SG_ AvgFuelConsumptionMileage : 39|16@0+ (0.1,0) [0|0] "kmpL" Vector__XXX
+ SG_ FuelLevel2 : 55|16@0+ (0.1,0) [0|0] "L" Vector__XXX
+
+BO_ 995 ECU_3E3: 8 ECU
+ SG_ FuelTrimShortTermBank1 : 7|16@0- (0.1,0) [0|0] "%" Vector__XXX
+ SG_ FuelTrimShortTermBank2 : 23|16@0- (0.1,0) [0|0] "%" Vector__XXX
+ SG_ FuelTrimShortTermBank3 : 39|16@0- (0.1,0) [0|0] "%" Vector__XXX
+ SG_ FuelTrimShortTermBank4 : 55|16@0- (0.1,0) [0|0] "%" Vector__XXX
+
+BO_ 996 ECU_3E4: 8 ECU
+ SG_ NeutralSwitch : 15|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ReverseSwitch : 14|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ GearSwitch : 13|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DecelCutActive : 12|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ TransientThrottleActive : 11|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BrakePedalSwitch : 10|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ClutchSwitch : 9|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OilPressureLight : 8|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LaunchControlActive : 23|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LaunchControlSwitch : 22|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AuxRPMLimiterActive : 21|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BrakeFluidLevelSwitch : 20|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ FlatShiftSwitch : 19|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ClutchPressureSensor : 18|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ TorqueReductionActive : 17|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ TractionControlEnabled : 31|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ TractionControlActive : 30|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AirConRequest : 29|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AirConOutput : 28|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Thermofan4On : 27|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Thermofan3On : 26|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Thermofan2On : 25|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Thermofan1On : 24|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ RotaryTrimPot1 : 39|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ RotaryTrimPot2 : 47|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ RotaryTrimPot3 : 55|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ TractionControlLight : 56|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ HandBrakeState : 57|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BatteryLightActive : 62|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ CheckEngineLight : 63|1@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 997 ECU_3E5: 8 Vector__XXX
+
+
+CM_ SG_ 864 ManifoldPressure "Absolute pressure, rest are gauge pressure unless stated otherwise";
+CM_ SG_ 875 NOSPressure1 "Strange math in the CAN specs, check it out";
+CM_ SG_ 880 CombinedGear "Combination of gear and selector channels (selector = x>>8 && 0xFF gear = x && 0xFF";
+CM_ SG_ 882 BarometricPressure "Absolute atmospherric pressure";
+CM_ SG_ 994 FuelLevel2 "In the specs this is also just called Fuel Level, but I don't know why there'd be 2 with the same name";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_DEF_DEF_  "CANFD_BRS" "0";
+BA_DEF_DEF_  "BusType" "";
+BA_ "VFrameFormat" BO_ 864 0;
+BA_ "CANFD_BRS" BO_ 864 0;
+BA_ "VFrameFormat" BO_ 865 0;
+BA_ "CANFD_BRS" BO_ 865 0;
+BA_ "VFrameFormat" BO_ 866 0;
+BA_ "CANFD_BRS" BO_ 866 0;
+BA_ "VFrameFormat" BO_ 867 0;
+BA_ "CANFD_BRS" BO_ 867 0;
+BA_ "VFrameFormat" BO_ 868 0;
+BA_ "CANFD_BRS" BO_ 868 0;
+BA_ "VFrameFormat" BO_ 872 0;
+BA_ "CANFD_BRS" BO_ 872 0;
+BA_ "VFrameFormat" BO_ 873 0;
+BA_ "CANFD_BRS" BO_ 873 0;
+BA_ "VFrameFormat" BO_ 874 0;
+BA_ "CANFD_BRS" BO_ 874 0;
+BA_ "VFrameFormat" BO_ 875 0;
+BA_ "CANFD_BRS" BO_ 875 0;
+BA_ "VFrameFormat" BO_ 876 0;
+BA_ "CANFD_BRS" BO_ 876 0;
+BA_ "VFrameFormat" BO_ 877 0;
+BA_ "CANFD_BRS" BO_ 877 0;
+BA_ "VFrameFormat" BO_ 878 0;
+BA_ "CANFD_BRS" BO_ 878 0;
+BA_ "VFrameFormat" BO_ 879 0;
+BA_ "CANFD_BRS" BO_ 879 0;
+BA_ "VFrameFormat" BO_ 880 0;
+BA_ "CANFD_BRS" BO_ 880 0;
+BA_ "VFrameFormat" BO_ 881 0;
+BA_ "CANFD_BRS" BO_ 881 0;
+BA_ "VFrameFormat" BO_ 882 0;
+BA_ "CANFD_BRS" BO_ 882 0;
+BA_ "VFrameFormat" BO_ 883 0;
+BA_ "CANFD_BRS" BO_ 883 0;
+BA_ "VFrameFormat" BO_ 884 0;
+BA_ "CANFD_BRS" BO_ 884 0;
+BA_ "VFrameFormat" BO_ 885 0;
+BA_ "CANFD_BRS" BO_ 885 0;
+BA_ "VFrameFormat" BO_ 886 0;
+BA_ "CANFD_BRS" BO_ 886 0;
+BA_ "VFrameFormat" BO_ 887 0;
+BA_ "CANFD_BRS" BO_ 887 0;
+BA_ "VFrameFormat" BO_ 896 0;
+BA_ "CANFD_BRS" BO_ 896 0;
+BA_ "VFrameFormat" BO_ 992 0;
+BA_ "CANFD_BRS" BO_ 992 0;
+BA_ "VFrameFormat" BO_ 993 0;
+BA_ "CANFD_BRS" BO_ 993 0;
+BA_ "VFrameFormat" BO_ 994 0;
+BA_ "CANFD_BRS" BO_ 994 0;
+BA_ "VFrameFormat" BO_ 995 0;
+BA_ "CANFD_BRS" BO_ 995 0;
+BA_ "VFrameFormat" BO_ 996 0;
+BA_ "CANFD_BRS" BO_ 996 0;
+BA_ "VFrameFormat" BO_ 997 0;
+BA_ "CANFD_BRS" BO_ 997 0;
