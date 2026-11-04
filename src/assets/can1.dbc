@@ -1,0 +1,379 @@
+VERSION ""
+
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: HALTECH_CAN_V2 AIM_LOGGER
+
+BO_ 864 HALTECH_CAN_V2_360: 9 HALTECH_CAN_V2
+ SG_ ECU_RPM : 8|16@1+ (1,0) [0|65535] "rpm"  AIM_LOGGER
+ SG_ ECU_ManifPress : 24|16@1+ (0.001,-1.013) [-1.013|64.522] "bar"  AIM_LOGGER
+ SG_ ECU_ThrottlePos : 40|16@1+ (0.1,0) [0|6553.5] "%"  AIM_LOGGER
+ SG_ ECU_CoolantPres : 56|16@1+ (0.001,-1.013) [-1.013|64.522] "bar"  AIM_LOGGER
+
+BO_ 865 HALTECH_CAN_V2_361: 9 HALTECH_CAN_V2
+ SG_ ECU_FuelPress : 8|16@1+ (0.001,-1.013) [-1.013|64.522] "bar"  AIM_LOGGER
+ SG_ ECU_OilPress : 24|16@1+ (0.001,-1.013) [-1.013|64.522] "bar"  AIM_LOGGER
+ SG_ ECU_EngineDeman : 40|16@1+ (0.1,0) [0|6553.5] "%"  AIM_LOGGER
+ SG_ ECU_WastegaPress : 56|16@1+ (0.001,-1.013) [-1.013|64.522] "bar"  AIM_LOGGER
+
+BO_ 866 HALTECH_CAN_V2_362: 8 HALTECH_CAN_V2
+ SG_ ECU_InjDT1 : 8|16@1+ (0.1,0) [0|6553.5] "%"  AIM_LOGGER
+ SG_ ECU_InjDT2 : 24|16@1+ (0.1,0) [0|6553.5] "%"  AIM_LOGGER
+ SG_ ECU_IgnAngLead : 40|16@1+ (0.1,0) [0|6553.5] "deg"  AIM_LOGGER
+
+BO_ 867 HALTECH_CAN_V2_363: 8 HALTECH_CAN_V2
+ SG_ ECU_WheelSlip : 8|16@1+ (0.1,0) [0|6553.5] "km/h"  AIM_LOGGER
+ SG_ ECU_WheelDiff : 24|16@1+ (0.0036,0) [0|235.926] "km/h"  AIM_LOGGER
+
+BO_ 872 HALTECH_CAN_V2_368: 9 HALTECH_CAN_V2
+ SG_ ECU_Lambda1 : 8|16@1+ (0.001,0) [0|65.535] "λ"  AIM_LOGGER
+ SG_ ECU_Lambda2 : 24|16@1+ (0.001,0) [0|65.535] "λ"  AIM_LOGGER
+ SG_ ECU_Lambda3 : 40|16@1+ (0.001,0) [0|65.535] "λ"  AIM_LOGGER
+ SG_ ECU_Lambda4 : 56|16@1+ (0.001,0) [0|65.535] "λ"  AIM_LOGGER
+
+BO_ 873 HALTECH_CAN_V2_369: 9 HALTECH_CAN_V2
+ SG_ ECU_TrigErrCount : 8|16@1+ (1,0) [0|65535] ""  AIM_LOGGER
+ SG_ ECU_TrigCount : 24|16@1+ (1,0) [0|65535] ""  AIM_LOGGER
+ SG_ ECU_TrigSyncLev : 56|16@1+ (1,0) [0|65535] ""  AIM_LOGGER
+
+BO_ 874 HALTECH_CAN_V2_36A: 8 HALTECH_CAN_V2
+ SG_ ECU_KnockLev1 : 8|16@1+ (0.01,0) [0|655.35] ""  AIM_LOGGER
+ SG_ ECU_KnockLev2 : 24|16@1+ (0.01,0) [0|655.35] ""  AIM_LOGGER
+
+BO_ 875 HALTECH_CAN_V2_36B: 9 HALTECH_CAN_V2
+ SG_ ECU_BrakePress : 8|16@1+ (0.01,-1.013) [-1.013|654.337] "bar"  AIM_LOGGER
+ SG_ ECU_NOSPressS1 : 24|16@1+ (0.0022,-1.013) [-1.013|143.164] "bar"  AIM_LOGGER
+ SG_ ECU_TurboSpd1 : 40|16@1+ (59.9999,0) [0|3.93209e+06] "deg/s"  AIM_LOGGER
+ SG_ ECU_LateralG : 56|16@1+ (0.0101937,0) [0|668.043] "g"  AIM_LOGGER
+
+BO_ 876 HALTECH_CAN_V2_36C: 9 HALTECH_CAN_V2
+ SG_ ECU_WheelSpdFL : 8|16@1+ (0.1,0) [0|6553.5] "km/h"  AIM_LOGGER
+ SG_ ECU_WheelSpdFR : 24|16@1+ (0.1,0) [0|6553.5] "km/h"  AIM_LOGGER
+ SG_ ECU_WheelSpdRL : 40|16@1+ (0.1,0) [0|6553.5] "km/h"  AIM_LOGGER
+ SG_ ECU_WheelSpdRR : 56|16@1+ (0.1,0) [0|6553.5] "km/h"  AIM_LOGGER
+
+BO_ 877 HALTECH_CAN_V2_36D: 9 HALTECH_CAN_V2
+ SG_ ECU_ExhCamAng1 : 40|16@1+ (0.1,0) [0|6553.5] "deg"  AIM_LOGGER
+ SG_ ECU_ExhCamAng2 : 56|16@1+ (0.1,0) [0|6553.5] "deg"  AIM_LOGGER
+
+BO_ 878 HALTECH_CAN_V2_36E: 9 HALTECH_CAN_V2
+ SG_ ECU_EngLimitAct : 8|16@1+ (1,0) [0|65535] ""  AIM_LOGGER
+ SG_ ECU_LaunchIgnRet : 24|16@1+ (0.1,0) [0|6553.5] "deg"  AIM_LOGGER
+ SG_ ECU_LaunchFuEn : 40|16@1+ (0.1,0) [0|6553.5] "%"  AIM_LOGGER
+ SG_ ECU_LongG : 56|16@1+ (0.0101937,0) [0|668.043] "g"  AIM_LOGGER
+
+BO_ 879 HALTECH_CAN_V2_36F: 8 HALTECH_CAN_V2
+ SG_ ECU_GenOut1DT : 8|16@1+ (0.1,0) [0|6553.5] "%"  AIM_LOGGER
+ SG_ ECU_BoostCtrOut : 24|16@1+ (0.1,0) [0|6553.5] "%"  AIM_LOGGER
+
+BO_ 880 HALTECH_CAN_V2_370: 9 HALTECH_CAN_V2
+ SG_ ECU_VehSpeed : 8|16@1+ (0.1,0) [0|6553.5] "km/h"  AIM_LOGGER
+ SG_ ECU_Gear : 24|16@1+ (1,0) [0|65535] "gear"  AIM_LOGGER
+ SG_ ECU_IntakeCamA1 : 40|16@1+ (0.1,0) [0|6553.5] "deg"  AIM_LOGGER
+ SG_ ECU_IntakeCamA2 : 56|16@1+ (0.1,0) [0|6553.5] "deg"  AIM_LOGGER
+
+BO_ 881 HALTECH_CAN_V2_371: 8 HALTECH_CAN_V2
+ SG_ ECU_FuelFlow : 8|16@1+ (0.000166667,0) [0|10.9225] "l/s"  AIM_LOGGER
+ SG_ ECU_FuReturn : 24|16@1+ (0.000166667,0) [0|10.9225] "l/s"  AIM_LOGGER
+
+BO_ 882 HALTECH_CAN_V2_372: 9 HALTECH_CAN_V2
+ SG_ ECU_BatteryVolt : 8|16@1+ (100,0) [0|6.5535e+06] "mV"  AIM_LOGGER
+ SG_ ECU_TargBoostLev : 40|16@1+ (0.001,-1.013) [-1.013|64.522] "bar"  AIM_LOGGER
+ SG_ ECU_BaromPress : 56|16@1+ (0.001,-1.013) [-1.013|64.522] "bar"  AIM_LOGGER
+
+BO_ 883 HALTECH_CAN_V2_373: 9 HALTECH_CAN_V2
+ SG_ ECU_EGTSensor1 : 8|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+ SG_ ECU_EGTSensor2 : 24|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+ SG_ ECU_EGTSensor3 : 40|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+ SG_ ECU_EGTSensor4 : 56|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+
+BO_ 884 HALTECH_CAN_V2_374: 9 HALTECH_CAN_V2
+ SG_ ECU_EGTSensor5 : 8|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+ SG_ ECU_EGTSensor6 : 24|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+ SG_ ECU_EGTSensor7 : 40|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+ SG_ ECU_EGTSensor8 : 56|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+
+BO_ 885 HALTECH_CAN_V2_375: 9 HALTECH_CAN_V2
+ SG_ ECU_EGTSensor9 : 8|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+ SG_ ECU_EGTSensor10 : 24|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+ SG_ ECU_EGTSensor11 : 40|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+ SG_ ECU_EGTSensor12 : 56|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+
+BO_ 886 HALTECH_CAN_V2_376: 9 HALTECH_CAN_V2
+ SG_ ECU_Amb_Air_T : 8|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+ SG_ ECU_Rel_Humidity : 24|16@1+ (0.1,0) [0|6553.5] "%"  AIM_LOGGER
+ SG_ ECU_Spec_Humi : 40|16@1+ (100,0) [0|6.5535e+06] ""  AIM_LOGGER
+ SG_ ECU_Abs_Humidity : 56|16@1+ (0.1,0) [0|6553.5] ""  AIM_LOGGER
+
+BO_ 992 HALTECH_CAN_V2_3E0: 9 HALTECH_CAN_V2
+ SG_ ECU_CoolantTemp : 8|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+ SG_ ECU_AirTemp : 24|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+ SG_ ECU_FuelTemp : 40|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+ SG_ ECU_OilTemp : 56|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+
+BO_ 993 HALTECH_CAN_V2_3E1: 8 HALTECH_CAN_V2
+ SG_ ECU_GearOilTemp : 8|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+ SG_ ECU_DiffOilTemp : 24|16@1+ (0.1,-273.15) [-273.15|6280.35] "C"  AIM_LOGGER
+ SG_ ECU_FuelCompos : 40|16@1+ (0.1,0) [0|6553.5] "%"  AIM_LOGGER
+
+BO_ 994 HALTECH_CAN_V2_3E2: 8 HALTECH_CAN_V2
+ SG_ ECU_FuelLevel : 8|16@1+ (0.1,0) [0|6553.5] "l"  AIM_LOGGER
+
+BO_ 995 HALTECH_CAN_V2_3E3: 9 HALTECH_CAN_V2
+ SG_ ECU_FuelTrimSTB1 : 8|16@1+ (0.1,0) [0|6553.5] "%"  AIM_LOGGER
+ SG_ ECU_FuelTrimSTB2 : 24|16@1+ (0.1,0) [0|6553.5] "%"  AIM_LOGGER
+ SG_ ECU_FuelTrimLTB1 : 40|16@1+ (0.1,0) [0|6553.5] "%"  AIM_LOGGER
+ SG_ ECU_FuelTrimLTB2 : 56|16@1+ (0.1,0) [0|6553.5] "%"  AIM_LOGGER
+
+BO_ 996 HALTECH_CAN_V2_3E4: 8 HALTECH_CAN_V2
+ SG_ ECU_Oil_Press_Li : 8|1@1+ (1,0) [0|1] ""  AIM_LOGGER
+ SG_ ECU_ClutchSw : 9|1@1+ (1,0) [0|1] ""  AIM_LOGGER
+ SG_ ECU_BrakePedSw : 10|1@1+ (1,0) [0|1] ""  AIM_LOGGER
+ SG_ ECU_TPSAct : 11|1@1+ (1,0) [0|1] ""  AIM_LOGGER
+ SG_ ECU_DecelCutActi : 12|1@1+ (1,0) [0|1] ""  AIM_LOGGER
+ SG_ ECU_GearSwitch : 13|1@1+ (1,0) [0|1] ""  AIM_LOGGER
+ SG_ ECU_Reverse_Sw : 14|1@1+ (1,0) [0|1] ""  AIM_LOGGER
+ SG_ ECU_Neutral_SW : 15|1@1+ (1,0) [0|1] ""  AIM_LOGGER
+ SG_ ECU_TorqueRedAct : 17|1@1+ (1,0) [0|1] ""  AIM_LOGGER
+ SG_ ECU_FlatShSw : 19|1@1+ (1,0) [0|1] ""  AIM_LOGGER
+ SG_ ECU_AuxRPMLimSw : 21|1@1+ (1,0) [0|1] ""  AIM_LOGGER
+ SG_ ECU_Laun_Ctr_Sw : 22|1@1+ (1,0) [0|1] ""  AIM_LOGGER
+ SG_ ECU_LaunchCtrAct : 23|1@1+ (1,0) [0|1] ""  AIM_LOGGER
+ SG_ ECU_TC_Ctrl_EN : 30|1@1+ (1,0) [0|1] ""  AIM_LOGGER
+ SG_ ECU_TC_Ctr_Act : 31|1@1+ (1,0) [0|1] ""  AIM_LOGGER
+ SG_ ECU_BatteryLtSw : 62|1@1+ (1,0) [0|1] ""  AIM_LOGGER
+ SG_ ECU_CheckEngLtSw : 63|1@1+ (1,0) [0|1] ""  AIM_LOGGER
+
+BO_ 997 HALTECH_CAN_V2_3E5: 9 HALTECH_CAN_V2
+ SG_ ECU_IgnitionSw : 0|8@1+ (1,0) [0|255] ""  AIM_LOGGER
+ SG_ ECU_TurboTimer : 8|8@1+ (1000,0) [0|255000] "ms"  AIM_LOGGER
+ SG_ ECU_TurbTimerEng : 16|8@1+ (1000,0) [0|255000] "ms"  AIM_LOGGER
+ SG_ ECU_SteerWheelAn : 40|16@1+ (0.1,0) [0|6553.5] "deg"  AIM_LOGGER
+ SG_ ECU_DriveshaRPM : 56|16@1+ (5.99999,0) [0|393209] "deg/s"  AIM_LOGGER
+
+BO_ 998 HALTECH_CAN_V2_3E6: 9 HALTECH_CAN_V2
+ SG_ ECU_NOSPressS2 : 8|16@1+ (0.0022,-1.013) [-1.013|143.164] "bar"  AIM_LOGGER
+ SG_ ECU_NOSPressS3 : 24|16@1+ (0.0022,-1.013) [-1.013|143.164] "bar"  AIM_LOGGER
+ SG_ ECU_NOSPressS4 : 40|16@1+ (0.0022,-1.013) [-1.013|143.164] "bar"  AIM_LOGGER
+ SG_ ECU_TurboSpdS2 : 56|16@1+ (59.9999,0) [0|3.93209e+06] "deg/s"  AIM_LOGGER
+
+BO_ 999 HALTECH_CAN_V2_3E7: 9 HALTECH_CAN_V2
+ SG_ ECU_GenericSen1 : 8|16@1+ (1,0) [0|65535] ""  AIM_LOGGER
+ SG_ ECU_GenericSen2 : 24|16@1+ (1,0) [0|65535] ""  AIM_LOGGER
+ SG_ ECU_GenericSen3 : 40|16@1+ (1,0) [0|65535] ""  AIM_LOGGER
+ SG_ ECU_GenericSen4 : 56|16@1+ (1,0) [0|65535] ""  AIM_LOGGER
+
+BO_ 1000 HALTECH_CAN_V2_3E8: 9 HALTECH_CAN_V2
+ SG_ ECU_GenericSen5 : 8|16@1+ (1,0) [0|65535] ""  AIM_LOGGER
+ SG_ ECU_GenericSen6 : 24|16@1+ (1,0) [0|65535] ""  AIM_LOGGER
+ SG_ ECU_GenericSen7 : 40|16@1+ (1,0) [0|65535] ""  AIM_LOGGER
+ SG_ ECU_GenericSen8 : 56|16@1+ (1,0) [0|65535] ""  AIM_LOGGER
+
+BO_ 1001 HALTECH_CAN_V2_3E9: 8 HALTECH_CAN_V2
+ SG_ ECU_GenericSen9 : 8|16@1+ (1,0) [0|65535] ""  AIM_LOGGER
+ SG_ ECU_GenericSen10 : 24|16@1+ (1,0) [0|65535] ""  AIM_LOGGER
+ SG_ ECU_TargLambda : 40|16@1+ (0.001,0) [0|65.535] ""  AIM_LOGGER
+ SG_ ECU_NitroStOutSt : 48|8@1+ (1,0) [0|255] ""  AIM_LOGGER
+ SG_ ECU_Torque_Man_K : 56|8@1+ (1,0) [0|255] ""  AIM_LOGGER
+
+BO_ 1002 HALTECH_CAN_V2_3EA: 9 HALTECH_CAN_V2
+ SG_ ECU_GearbOilPres : 8|16@1+ (0.001,-1.013) [-1.013|64.522] "bar"  AIM_LOGGER
+ SG_ ECU_InjectionDT3 : 24|16@1+ (0.1,0) [0|6553.5] "%"  AIM_LOGGER
+ SG_ ECU_InjectionDT4 : 40|16@1+ (0.1,0) [0|6553.5] "%"  AIM_LOGGER
+ SG_ ECU_CrankCPress : 56|16@1+ (0.001,-1.013) [-1.013|64.522] "bar"  AIM_LOGGER
+
+BO_ 1003 HALTECH_CAN_V2_3EB: 9 HALTECH_CAN_V2
+ SG_ ECU_RaceTimer : 16|24@1+ (1,0) [0|1.67772e+07] "ms"  AIM_LOGGER
+ SG_ ECU_IgnitionAng1 : 40|16@1+ (0.1,0) [0|6553.5] "deg"  AIM_LOGGER
+ SG_ ECU_IgnitionAng2 : 56|16@1+ (0.1,0) [0|6553.5] "deg"  AIM_LOGGER
+
+BO_ 1004 HALTECH_CAN_V2_3EC: 9 HALTECH_CAN_V2
+ SG_ ECU_TorqDrvsRPMT : 8|16@1+ (5.99999,0) [0|393209] "deg/s"  AIM_LOGGER
+ SG_ ECU_TorqDrvsRPME : 24|16@1+ (5.99999,0) [0|393209] "deg/s"  AIM_LOGGER
+ SG_ ECU_TorDrRPMEI : 40|16@1+ (0.1,0) [0|6553.5] "deg"  AIM_LOGGER
+ SG_ ECU_TorDrRPMIC : 56|16@1+ (0.1,0) [0|6553.5] "deg"  AIM_LOGGER
+
+BO_ 1005 HALTECH_CAN_V2_3ED: 8 HALTECH_CAN_V2
+ SG_ ECU_TorqCIgnCorr : 8|16@1+ (0.1,0) [0|6553.5] "deg"  AIM_LOGGER
+
+BO_ 1136 HALTECH_CAN_V2_470: 8 HALTECH_CAN_V2
+ SG_ ECU_Gear_2 : 56|8@1+ (1,0) [0|255] "gear"  AIM_LOGGER
+
+BO_ 1137 HALTECH_CAN_V2_471: 8 HALTECH_CAN_V2
+ SG_ ECU_Inj_Pres_D : 8|16@1+ (0.001,-1.013) [-1.013|64.522] "bar"  AIM_LOGGER
+ SG_ ECU_Acc_Ped_Pos : 24|16@1+ (0.1,0) [0|6553.5] "%"  AIM_LOGGER
+
+BO_ 1138 HALTECH_CAN_V2_472: 8 HALTECH_CAN_V2
+ SG_ ECU_Cruise_Trg_S : 8|16@1+ (0.1,0) [0|6553.5] "km/h"  AIM_LOGGER
+ SG_ ECU_Cru_Last_T_S : 24|16@1+ (0.1,0) [0|6553.5] "km/h"  AIM_LOGGER
+ SG_ ECU_Crui_Spd_Err : 40|16@1+ (0.1,0) [0|6553.5] "km/h"  AIM_LOGGER
+ SG_ ECU_Cruise_Ctr_S : 52|4@1+ (1,0) [0|15] ""  AIM_LOGGER
+
+
+CM_ "AiM protocol HALTECH / CAN V2, driver 02.00.04, bus mode 6";
+CM_ SG_ 864 ECU_RPM "AiM channel CC01, 10 Hz, physical = raw*1+0";
+CM_ SG_ 864 ECU_ManifPress "AiM channel CC02, 10 Hz, physical = raw*0.001-1.013";
+CM_ SG_ 864 ECU_ThrottlePos "AiM channel CC03, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 864 ECU_CoolantPres "AiM channel CC04, 10 Hz, physical = raw*0.001-1.013";
+CM_ SG_ 865 ECU_FuelPress "AiM channel CC05, 10 Hz, physical = raw*0.001-1.013";
+CM_ SG_ 865 ECU_OilPress "AiM channel CC06, 10 Hz, physical = raw*0.001-1.013";
+CM_ SG_ 865 ECU_EngineDeman "AiM channel CC07, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 865 ECU_WastegaPress "AiM channel CC08, 10 Hz, physical = raw*0.001-1.013";
+CM_ SG_ 866 ECU_InjDT1 "AiM channel CC09, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 866 ECU_InjDT2 "AiM channel CC10, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 866 ECU_IgnAngLead "AiM channel CC11, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 867 ECU_WheelSlip "AiM channel CC12, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 867 ECU_WheelDiff "AiM channel CC13, 10 Hz, physical = raw*0.0036+0";
+CM_ SG_ 872 ECU_Lambda1 "AiM channel CC14, 10 Hz, physical = raw*0.001+0";
+CM_ SG_ 872 ECU_Lambda2 "AiM channel CC15, 10 Hz, physical = raw*0.001+0";
+CM_ SG_ 872 ECU_Lambda3 "AiM channel CC16, 10 Hz, physical = raw*0.001+0";
+CM_ SG_ 872 ECU_Lambda4 "AiM channel CC17, 10 Hz, physical = raw*0.001+0";
+CM_ SG_ 873 ECU_TrigErrCount "AiM channel CC18, 10 Hz, physical = raw*1+0";
+CM_ SG_ 873 ECU_TrigCount "AiM channel CC19, 10 Hz, physical = raw*1+0";
+CM_ SG_ 873 ECU_TrigSyncLev "AiM channel CC20, 10 Hz, physical = raw*1+0";
+CM_ SG_ 874 ECU_KnockLev1 "AiM channel CC21, 10 Hz, physical = raw*0.01+0";
+CM_ SG_ 874 ECU_KnockLev2 "AiM channel CC22, 10 Hz, physical = raw*0.01+0";
+CM_ SG_ 875 ECU_BrakePress "AiM channel CC23, 10 Hz, physical = raw*0.01-1.013";
+CM_ SG_ 875 ECU_NOSPressS1 "AiM channel CC24, 10 Hz, physical = raw*0.0022-1.013";
+CM_ SG_ 875 ECU_TurboSpd1 "AiM channel CC25, 10 Hz, physical = raw*59.9999+0";
+CM_ SG_ 875 ECU_LateralG "AiM channel CC26, 10 Hz, physical = raw*0.0101937+0";
+CM_ SG_ 876 ECU_WheelSpdFL "AiM channel CC27, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 876 ECU_WheelSpdFR "AiM channel CC28, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 876 ECU_WheelSpdRL "AiM channel CC29, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 876 ECU_WheelSpdRR "AiM channel CC30, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 877 ECU_ExhCamAng1 "AiM channel CC31, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 877 ECU_ExhCamAng2 "AiM channel CC32, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 878 ECU_EngLimitAct "AiM channel CC33, 10 Hz, identity";
+CM_ SG_ 878 ECU_LaunchIgnRet "AiM channel CC34, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 878 ECU_LaunchFuEn "AiM channel CC35, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 878 ECU_LongG "AiM channel CC36, 10 Hz, physical = raw*0.0101937+0";
+CM_ SG_ 879 ECU_GenOut1DT "AiM channel CC37, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 879 ECU_BoostCtrOut "AiM channel CC38, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 880 ECU_VehSpeed "AiM channel CC39, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 880 ECU_Gear "AiM channel CC40, 10 Hz, identity";
+CM_ SG_ 880 ECU_IntakeCamA1 "AiM channel CC41, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 880 ECU_IntakeCamA2 "AiM channel CC42, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 881 ECU_FuelFlow "AiM channel CC43, 10 Hz, physical = raw*0.000166667+0";
+CM_ SG_ 881 ECU_FuReturn "AiM channel CC44, 10 Hz, physical = raw*0.000166667+0";
+CM_ SG_ 882 ECU_BatteryVolt "AiM channel CC45, 10 Hz, physical = raw*100+0";
+CM_ SG_ 882 ECU_TargBoostLev "AiM channel CC46, 10 Hz, physical = raw*0.001-1.013";
+CM_ SG_ 882 ECU_BaromPress "AiM channel CC47, 10 Hz, physical = raw*0.001-1.013";
+CM_ SG_ 883 ECU_EGTSensor1 "AiM channel CC48, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 883 ECU_EGTSensor2 "AiM channel CC49, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 883 ECU_EGTSensor3 "AiM channel CC50, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 883 ECU_EGTSensor4 "AiM channel CC51, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 884 ECU_EGTSensor5 "AiM channel CC52, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 884 ECU_EGTSensor6 "AiM channel CC53, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 884 ECU_EGTSensor7 "AiM channel CC54, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 884 ECU_EGTSensor8 "AiM channel CC55, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 885 ECU_EGTSensor9 "AiM channel CC56, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 885 ECU_EGTSensor10 "AiM channel CC57, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 885 ECU_EGTSensor11 "AiM channel CC58, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 885 ECU_EGTSensor12 "AiM channel CC59, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 886 ECU_Amb_Air_T "AiM channel CC60, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 886 ECU_Rel_Humidity "AiM channel CC61, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 886 ECU_Spec_Humi "AiM channel CC62, 10 Hz, physical = raw*100+0";
+CM_ SG_ 886 ECU_Abs_Humidity "AiM channel CC63, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 992 ECU_CoolantTemp "AiM channel CC60, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 992 ECU_AirTemp "AiM channel CC61, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 992 ECU_FuelTemp "AiM channel CC62, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 992 ECU_OilTemp "AiM channel CC63, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 993 ECU_GearOilTemp "AiM channel CC64, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 993 ECU_DiffOilTemp "AiM channel CC65, 10 Hz, physical = raw*0.1-273.15";
+CM_ SG_ 993 ECU_FuelCompos "AiM channel CC66, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 994 ECU_FuelLevel "AiM channel CC67, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 995 ECU_FuelTrimSTB1 "AiM channel CC68, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 995 ECU_FuelTrimSTB2 "AiM channel CC69, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 995 ECU_FuelTrimLTB1 "AiM channel CC70, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 995 ECU_FuelTrimLTB2 "AiM channel CC71, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 996 ECU_Oil_Press_Li "AiM channel CC89, 10 Hz, physical = raw*1+0";
+CM_ SG_ 996 ECU_ClutchSw "AiM channel CC76, 10 Hz, identity";
+CM_ SG_ 996 ECU_BrakePedSw "AiM channel CC75, 10 Hz, identity";
+CM_ SG_ 996 ECU_TPSAct "AiM channel CC74, 10 Hz, identity";
+CM_ SG_ 996 ECU_DecelCutActi "AiM channel CC73, 10 Hz, identity";
+CM_ SG_ 996 ECU_GearSwitch "AiM channel CC72, 10 Hz, identity";
+CM_ SG_ 996 ECU_Reverse_Sw "AiM channel CC88, 10 Hz, physical = raw*1+0";
+CM_ SG_ 996 ECU_Neutral_SW "AiM channel CC87, 10 Hz, physical = raw*1+0";
+CM_ SG_ 996 ECU_TorqueRedAct "AiM channel CC77, 10 Hz, identity";
+CM_ SG_ 996 ECU_FlatShSw "AiM channel CC78, 10 Hz, identity";
+CM_ SG_ 996 ECU_AuxRPMLimSw "AiM channel CC79, 10 Hz, identity";
+CM_ SG_ 996 ECU_Laun_Ctr_Sw "AiM channel CC90, 10 Hz, physical = raw*1+0";
+CM_ SG_ 996 ECU_LaunchCtrAct "AiM channel CC80, 10 Hz, identity";
+CM_ SG_ 996 ECU_TC_Ctrl_EN "AiM channel CC92, 10 Hz, physical = raw*1+0";
+CM_ SG_ 996 ECU_TC_Ctr_Act "AiM channel CC91, 10 Hz, physical = raw*1+0";
+CM_ SG_ 996 ECU_BatteryLtSw "AiM channel CC81, 10 Hz, identity";
+CM_ SG_ 996 ECU_CheckEngLtSw "AiM channel CC82, 10 Hz, identity";
+CM_ SG_ 997 ECU_IgnitionSw "AiM channel CC83, 10 Hz, identity";
+CM_ SG_ 997 ECU_TurboTimer "AiM channel CC84, 10 Hz, physical = raw*1000+0";
+CM_ SG_ 997 ECU_TurbTimerEng "AiM channel CC85, 10 Hz, physical = raw*1000+0";
+CM_ SG_ 997 ECU_SteerWheelAn "AiM channel CC86, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 997 ECU_DriveshaRPM "AiM channel CC87, 10 Hz, physical = raw*5.99999+0";
+CM_ SG_ 998 ECU_NOSPressS2 "AiM channel CC88, 10 Hz, physical = raw*0.0022-1.013";
+CM_ SG_ 998 ECU_NOSPressS3 "AiM channel CC89, 10 Hz, physical = raw*0.0022-1.013";
+CM_ SG_ 998 ECU_NOSPressS4 "AiM channel CC90, 10 Hz, physical = raw*0.0022-1.013";
+CM_ SG_ 998 ECU_TurboSpdS2 "AiM channel CC91, 10 Hz, physical = raw*59.9999+0";
+CM_ SG_ 999 ECU_GenericSen1 "AiM channel CC92, 10 Hz, physical = raw*1+0";
+CM_ SG_ 999 ECU_GenericSen2 "AiM channel CC93, 10 Hz, physical = raw*1+0";
+CM_ SG_ 999 ECU_GenericSen3 "AiM channel CC94, 10 Hz, physical = raw*1+0";
+CM_ SG_ 999 ECU_GenericSen4 "AiM channel CC95, 10 Hz, physical = raw*1+0";
+CM_ SG_ 1000 ECU_GenericSen5 "AiM channel CC96, 10 Hz, physical = raw*1+0";
+CM_ SG_ 1000 ECU_GenericSen6 "AiM channel CC97, 10 Hz, physical = raw*1+0";
+CM_ SG_ 1000 ECU_GenericSen7 "AiM channel CC98, 10 Hz, physical = raw*1+0";
+CM_ SG_ 1000 ECU_GenericSen8 "AiM channel CC99, 10 Hz, physical = raw*1+0";
+CM_ SG_ 1001 ECU_GenericSen9 "AiM channel CC100, 10 Hz, physical = raw*1+0";
+CM_ SG_ 1001 ECU_GenericSen10 "AiM channel CC101, 10 Hz, physical = raw*1+0";
+CM_ SG_ 1001 ECU_TargLambda "AiM channel CC102, 10 Hz, physical = raw*0.001+0";
+CM_ SG_ 1001 ECU_NitroStOutSt "AiM channel CC103, 10 Hz, physical = raw*1+0";
+CM_ SG_ 1001 ECU_Torque_Man_K "AiM channel CC104, 10 Hz, physical = raw*1+0";
+CM_ SG_ 1002 ECU_GearbOilPres "AiM channel CC105, 10 Hz, physical = raw*0.001-1.013";
+CM_ SG_ 1002 ECU_InjectionDT3 "AiM channel CC106, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 1002 ECU_InjectionDT4 "AiM channel CC107, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 1002 ECU_CrankCPress "AiM channel CC108, 10 Hz, physical = raw*0.001-1.013";
+CM_ SG_ 1003 ECU_RaceTimer "AiM channel CC109, 10 Hz, physical = raw*1+0";
+CM_ SG_ 1003 ECU_IgnitionAng1 "AiM channel CC110, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 1003 ECU_IgnitionAng2 "AiM channel CC111, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 1004 ECU_TorqDrvsRPMT "AiM channel CC112, 10 Hz, physical = raw*5.99999+0";
+CM_ SG_ 1004 ECU_TorqDrvsRPME "AiM channel CC113, 10 Hz, physical = raw*5.99999+0";
+CM_ SG_ 1004 ECU_TorDrRPMEI "AiM channel CC114, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 1004 ECU_TorDrRPMIC "AiM channel CC115, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 1005 ECU_TorqCIgnCorr "AiM channel CC116, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 1136 ECU_Gear_2 "AiM channel CC127, 10 Hz, identity";
+CM_ SG_ 1137 ECU_Inj_Pres_D "AiM channel CC127, 10 Hz, physical = raw*0.001-1.013";
+CM_ SG_ 1137 ECU_Acc_Ped_Pos "AiM channel CC128, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 1138 ECU_Cruise_Trg_S "AiM channel CC129, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 1138 ECU_Cru_Last_T_S "AiM channel CC130, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 1138 ECU_Crui_Spd_Err "AiM channel CC131, 10 Hz, physical = raw*0.1+0";
+CM_ SG_ 1138 ECU_Cruise_Ctr_S "AiM channel CC132, 10 Hz, identity";
+
+
