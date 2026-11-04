@@ -40,3 +40,15 @@
 .read-the-docs {
   color: #888;
 }
+
+.tile {
+  padding: 2px;
+}
+
+.true {
+  background-color: #00c732;
+}
+
+.false {
+  background-color: #d84646;
+}

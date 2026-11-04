@@ -1,34 +1,16 @@
-import { useState } from 'react'
-import viteLogo from '/electron-vite.animate.svg'
 import '../App.css'
 import { TelemetryProvider } from '../utilities/TelemetryProvider'
 import ValueTile from './ValueTile'
+import BoolTile from './BoolTile'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://electron-vite.github.io" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-        <TelemetryProvider>
-          <ValueTile title='Engine RPM' id='RPM' unit='rpm'></ValueTile>
-        </TelemetryProvider>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Dash</h1>
+      <TelemetryProvider>
+        <ValueTile title='Engine RPM' id='RPM' unit='rpm'></ValueTile>
+        <BoolTile title='Oil Pressure' id='OilPressureLight'></BoolTile>
+      </TelemetryProvider>
     </>
   )
 }

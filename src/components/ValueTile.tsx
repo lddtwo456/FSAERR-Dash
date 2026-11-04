@@ -12,7 +12,7 @@ export default function ValueTile({ title, id, unit }: Props) {
     const value = values[id];
 
 	return (
-		<div className="value-tile" aria-live="polite">
+		<div className="tile" aria-live="polite">
 			<h3>{title}</h3>
 			<p>{value === undefined ? '---' : value}{unit}</p>
 		</div>
