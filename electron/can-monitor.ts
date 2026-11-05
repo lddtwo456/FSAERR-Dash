@@ -1,7 +1,7 @@
 import * as can from 'socketcan';
 
 const network = can.parseNetworkDescription('./src/assets/can.kcd');
-const channel = can.createRawChannel('vcan0', true);
+const channel = can.createRawChannel('can0', true);
 const db = new can.DatabaseService(channel, network.buses['Bus']);
 
 channel.start();
