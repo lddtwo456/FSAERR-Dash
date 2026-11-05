@@ -8,8 +8,8 @@ function App() {
     <>
       <h1>Dash</h1>
       <TelemetryProvider>
-        <ValueTile title='Manifold Pressure' id='ManifoldPressure' unit='kPa'></ValueTile>
-        <ValueTile title='RPM' id='RPM' unit='rpm'></ValueTile>
+        <ValueTile title='Air temp' id='AirTemp' unit='C'></ValueTile>
+        <ValueTile title='Air temp pre intercooler' id='AirTempPreIntercooler' unit='C'></ValueTile>
         <BoolTile title='Oil Pressure' id='OilPressureLight'></BoolTile>
       </TelemetryProvider>
     </>
