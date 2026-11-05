@@ -12,7 +12,6 @@ const signals: Record<string, number | undefined> = {};
 for (const message of Object.values(db.messages)) {
     for (const [signalName, signal] of Object.entries(message.signals)) {
         signal.onChange(function(s: can.Signal) {
-            console.log(signalName + ' changed to: ' + s.value);
             if (s.value !== undefined) {
                 signals[signalName] = s.value;
             }
