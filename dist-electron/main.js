@@ -1,10 +1,9 @@
 import { ipcMain, app, BrowserWindow } from "electron";
-import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import * as can from "socketcan";
 const network = can.parseNetworkDescription("./src/assets/can.kcd");
-const channel = can.createRawChannel("vcan0", true);
+const channel = can.createRawChannel(process.env.CAN_INTERFACE ?? "can0", true);
 const db = new can.DatabaseService(channel, network.buses["Bus"]);
 channel.start();
 const signals = {};
@@ -20,7 +19,6 @@ for (const message of Object.values(db.messages)) {
 function getSignals() {
   return signals;
 }
-createRequire(import.meta.url);
 const __dirname$1 = path.dirname(fileURLToPath(import.meta.url));
 process.env.APP_ROOT = path.join(__dirname$1, "..");
 const VITE_DEV_SERVER_URL = process.env["VITE_DEV_SERVER_URL"];
