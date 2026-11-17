@@ -11,7 +11,6 @@ const signals = {};
 for (const message of Object.values(db.messages)) {
   for (const [signalName, signal] of Object.entries(message.signals)) {
     signal.onChange(function(s) {
-      console.log(signalName + " changed to: " + s.value);
       if (s.value !== void 0) {
         signals[signalName] = s.value;
       }
