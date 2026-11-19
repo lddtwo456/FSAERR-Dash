@@ -2,6 +2,7 @@ import '../App.css'
 import { TelemetryProvider } from '../utilities/TelemetryProvider'
 import ValueTile from './ValueTile'
 import BoolTile from './BoolTile'
+import { RPMTile } from './RPMTile'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <ValueTile title='RPM' id='RPM' unit='rpm'></ValueTile>
           <BoolTile title='Oil Pressure' id='OilPressureLight'></BoolTile>
         </div>
+        <RPMTile id='RPM' yellow={4000} red={6000} limit={7000} width='100%' height='200px'></RPMTile>
       </TelemetryProvider>
     </>
   )

@@ -23,6 +23,12 @@ export function RPMTile({ id, yellow, red, limit, width, height }: Props) {
         if (!canvas || !ctx) return;
 
         // can access value yellow red limit  here to draw the RPM gauge
+        const w = canvas.width;
+        const h = canvas.height;
+        
+        ctx.clearRect(0, 0, w, h);
+        ctx.rect(w/2-w/4, h/2-h/4, w/2, h/2);
+        ctx.stroke();
     }
 
     useEffect(() => {
