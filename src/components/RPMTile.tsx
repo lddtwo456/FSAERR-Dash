@@ -3,6 +3,7 @@ import { useRef, useEffect } from 'react';
 
 type Props = {
     id: string;
+    green: number;
     yellow: number;
     red: number;
     limit: number;
@@ -10,7 +11,7 @@ type Props = {
     height: number | string;
 }
 
-export function RPMTile({ id, yellow, red, limit, width, height }: Props) {
+export function RPMTile({ id, green, yellow, red, limit, width, height }: Props) {
     const values = useTelemetry();
     const value = values[id];
     const divRef = useRef<HTMLDivElement>(null);
@@ -25,9 +26,19 @@ export function RPMTile({ id, yellow, red, limit, width, height }: Props) {
         // can access value yellow red limit  here to draw the RPM gauge
         const w = canvas.width;
         const h = canvas.height;
+
+        const segments = Math.round(w / (h * 0.333));
+        const segmentWidth = w / segments;
+        const segmentPadding = segmentWidth * 0.05;
+        const segmentValue = (limit - green) / segments;
         
         ctx.clearRect(0, 0, w, h);
-        ctx.rect(w/2-w/4, h/2-h/4, w/2, h/2);
+
+        for (let i = 0; i < segments; i++) {
+            ctx.fillStyle = i * segmentValue + green < yellow ? 'green' : i * segmentValue + green< red ? 'yellow' : 'red';
+            ctx.fillRect(i * segmentWidth + segmentPadding, segmentPadding, segmentWidth - segmentPadding * 2, h - segmentPadding * 2);
+        }
+        
         ctx.stroke();
     }
 

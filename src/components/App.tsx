@@ -19,7 +19,7 @@ function App() {
           <ValueTile title='RPM' id='RPM' unit='rpm'></ValueTile>
           <BoolTile title='Oil Pressure' id='OilPressureLight'></BoolTile>
         </div>
-        <RPMTile id='RPM' yellow={4000} red={6000} limit={7000} width='100%' height='200px'></RPMTile>
+        <RPMTile id='RPM' green={5000} yellow={10500} red={13500} limit={15000} width='100%' height='100px'></RPMTile>
       </TelemetryProvider>
     </>
   )
